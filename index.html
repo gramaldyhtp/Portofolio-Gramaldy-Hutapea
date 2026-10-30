@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gramaldy Euraldo Hutapea | Portfolio</title>
+  <meta name="description" content="Portfolio of Gramaldy Euraldo Hutapea - Computer Technology fresh graduate focusing on DevOps, System Administration, Data QE, and Embedded/IoT." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#111b2e;
+      --text:#eaf0ff;
+      --muted:#a9b7d6;
+      --line:rgba(255,255,255,.08);
+      --accent:#7aa7ff;
+      --accent2:#7dffcc;
+    }
+    *{box-sizing:border-box}
+    html { scroll-behavior: smooth; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue";
+      background: radial-gradient(900px 600px at 10% 10%, rgba(122,167,255,.18), transparent 55%),
+                  radial-gradient(900px 600px at 90% 20%, rgba(125,255,204,.14), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1060px;margin:0 auto;padding:28px 18px 60px}
+    header{
+      position:sticky; top:0;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.55);
+      border-bottom:1px solid var(--line);
+      z-index:10;
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      max-width:1060px; margin:0 auto; padding:14px 18px;
+    }
+    .brand{display:flex; gap:10px; align-items:center; font-weight:700}
+    .dot{width:10px;height:10px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+    .links{display:flex; gap:14px; flex-wrap:wrap; font-size:14px; color:var(--muted)}
+    .links a{padding:6px 10px;border:1px solid var(--line); border-radius:999px}
+    .links a:hover{border-color:rgba(122,167,255,.45); color:var(--text)}
+
+    .hero{padding:42px 0 10px; display:grid; gap:18px}
+    .tag{display:inline-flex; gap:8px; align-items:center; padding:8px 12px; border:1px solid var(--line); border-radius:999px; color:var(--muted); width:fit-content}
+    h1{margin:0; font-size:38px; line-height:1.2}
+    .sub{max-width:780px;color:var(--muted); margin:0}
+    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px}
+    .btn{
+      padding:10px 14px; border-radius:12px; border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      font-weight:600; font-size:14px;
+      transition: 0.2s ease;
+    }
+    .btn.primary{
+      border-color: rgba(122,167,255,.55);
+      background: linear-gradient(90deg, rgba(122,167,255,.18), rgba(125,255,204,.10));
+    }
+    .btn:hover{transform: translateY(-2px); border-color: var(--accent);}
+
+    .grid{display:grid; gap:14px}
+    .card{
+      background: rgba(17,27,46,.72);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .card h2{margin:0 0 8px;font-size:18px}
+    .proj-img {
+      width: 100%;
+      height: 180px;
+      background: #1a263d;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+    .proj-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .card:hover .proj-img img {
+      transform: scale(1.05);
+    }
+
+    .muted{color:var(--muted)}
+    .pill{
+      display:inline-flex; padding:6px 10px; border:1px solid var(--line); border-radius:999px;
+      font-size:12px; color:var(--muted); margin:6px 6px 0 0;
+    }
+    .section{margin-top:28px}
+    .sectionTitle{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:10px;
+      margin:0 0 12px;
+    }
+    .sectionTitle h2{margin:0;font-size:18px}
+    .sectionTitle span{color:var(--muted); font-size:13px}
+
+    .projects{display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:20px}
+    .projTitle{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom: 8px;}
+    .projTitle h3{margin:0;font-size:16px}
+    .projMeta{font-size:12px;color:var(--muted)}
+    ul{margin:10px 0 0 18px; color:var(--muted); font-size: 14px; flex-grow: 1;}
+    footer{margin-top:34px;color:var(--muted); font-size:13px; text-align:center; padding-bottom: 40px;}
+
+    @media (max-width:520px){
+      h1{font-size:30px}
+      .projects { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="nav">
+    <div class="brand"><span class="dot"></span> Gramaldy Euraldo Hutapea</div>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" id="top">
+    <div class="tag">Computer Technology Fresh Graduate • Del Institute of Technology</div>
+    <h1>DevOps Engineering, Linux Server Management, Data QE & Embedded Systems/IoT</h1>
+    <p class="sub">
+      A motivated fast learner with hands-on experience in enterprise data quality engineering, web-based automation tools, Linux administration, and embedded IoT development.
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn" href="#contact">Contact Me</a>
+      <a class="btn" href="https://www.linkedin.com/in/gramaldy-euraldo-b06582342" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="btn" href="https://github.com/gramaldyhtp" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="sectionTitle">
+      <h2>About Me</h2>
+      <span>Short profile</span>
+    </div>
+    <div class="card">
+      <p class="muted" style="margin:0">
+        Computer Technology fresh graduate from Institut Teknologi Del with practical experience in Linux server management, data quality engineering (QE), and embedded systems/IoT development. Skilled in basic automation, CI/CD concepts, microcontroller programming (Arduino, ESP32), and structured QA processes across data pipelines and AI-generated content.
+      </p>
+    </div>
+  </section>
+
+  <!-- WORK EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="sectionTitle">
+      <h2>Work Experience</h2>
+      <span>Internship & Freelance</span>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="projTitle">
+          <h3>Data Management & Quality Engineering (QE) Intern</h3>
+          <div class="projMeta">Feb 2026 - Jun 2026</div>
+        </div>
+        <div class="muted" style="font-size: 13px; margin-bottom: 8px; color: var(--accent);">PT Telkom Infrastruktur Indonesia</div>
+        <ul>
+          <li>Execute QA testing on enterprise data pipelines, identifying bugs and data inaccuracies[cite: 3].</li>
+          <li>Architected and deployed "VALINSA Cloud Sync", a web-based data automation tool improving sync accuracy[cite: 3].</li>
+          <li>Analyze system logs and operational data to support overall system reliability[cite: 3].</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="projTitle">
+          <h3>AI Data Annotator & LLM Specialist</h3>
+          <div class="projMeta">May 2026 - Present</div>
+        </div>
+        <div class="muted" style="font-size: 13px; margin-bottom: 8px; color: var(--accent);">RWS Group / Multimango (Freelance)</div>
+        <ul>
+          <li>Evaluate multi-turn LLMs and speech-to-speech (S2S) models via A/B testing[cite: 3].</li>
+          <li>Stress-test model resilience against hallucination and sycophancy failure modes[cite: 3].</li>
+          <li>Run QA on TTS/ASR outputs across signal quality, pronunciation, and pacing dimensions[cite: 3].</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="sectionTitle">
+      <h2>Skills</h2>
+      <span>Practiced</span>
+    </div>
+    <div class="projects">
+      <div class="card">
+        <h2>Systems & Infrastructure</h2>
+        <div>
+          <span class="pill">Linux Server Management</span>
+          <span class="pill">DevOps & CI/CD Concepts</span>
+          <span class="pill">Basic Automation</span>
+          <span class="pill">Cloud Computing</span>
+          <span class="pill">Network Infrastructure</span>
+	  <span class="pill">Bash / Basic Automation</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Embedded, Web & Analytics</h2>
+        <div>
+          <span class="pill">Arduino / ESP32</span>
+          <span class="pill">LoRa Protocol</span>
+          <span class="pill">Python</span>
+          <span class="pill">PHP & Laravel</span>
+          <span class="pill">JavaScript & HTML/CSS</span>
+          <span class="pill">Quality Engineering (QE)</span>
+	  <span class="pill">MySQL & Databases</span>
+        </div>
+      </div>
+	<div class="card">
+        <h2>Quality Engineering & Languages</h2>
+        <div>
+          <span class="pill">Quality Engineering (QE)</span>
+          <span class="pill">Data Validation & Pipeline QA</span>
+          <span class="pill">LLM & S2S Model Evaluation</span>
+          <span class="pill">Log Analysis & Troubleshooting</span>
+          <span class="pill" style="border-color: var(--accent);">English (Professional)</span>
+          <span class="pill">Indonesian (Native)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="sectionTitle">
+      <h2>Projects</h2>
+      <span>Selected work</span>
+    </div>
+
+    <div class="projects">
+      <!-- Proyek 1 -->
+      <article class="card">
+        <div class="proj-img">
+          <img src="LoRa.png" alt="Water Safety Project">
+        </div>
+        <div class="projTitle">
+          <h3>IoT Water Safety (LoRa)</h3>
+          <div class="projMeta">LoRa • Final Year Project</div>
+        </div>
+        <ul>
+          <li>Designed an IoT-based water safety monitoring system using LoRa communication for long-range, low-power data transmission[cite: 3].</li>
+          <li>Developed sensor node functionality using microcontrollers and implemented a heartbeat mechanism to prevent silent failures[cite: 3].</li>
+          <li>Integrated GPS and environmental sensors to support location tracking and safety detection[cite: 3].</li>
+        </ul>
+      </article>
+
+      <!-- Proyek 2 -->
+      <article class="card">
+        <div class="proj-img">
+          <img src="smarthome.jpeg" alt="Smart Home IoT Project">
+        </div>
+        <div class="projTitle">
+          <h3>Smart Home IoT Gateway</h3>
+          <div class="projMeta">Laravel • MySQL • MQTT</div>
+        </div>
+        <ul>
+          <li>Built backend routing, controllers, and MySQL data handling for a Laravel-based IoT monitoring system[cite: 3].</li>
+          <li>Designed responsive dashboards (Blade, HTML, CSS, JS) displaying real-time sensor data and device status[cite: 3].</li>
+          <li>Implemented MQTT-based command control flow between web dashboard and IoT devices.</li>
+        </ul>
+      </article>
+
+      <!-- Proyek 3 -->
+      <article class="card">
+        <div class="proj-img">
+          <img src="jamur.png" alt="Mushroom IoT Project">
+        </div>
+        <div class="projTitle">
+          <h3>Mushroom Cultivation Device</h3>
+          <div class="projMeta">IoT • ESP32</div>
+        </div>
+        <ul>
+          <li>Designed and built a prototype system for urban mushroom cultivation using Arduino/ESP32-based controllers.</li>
+          <li>Integrated temperature and humidity sensors to monitor environmental conditions inside the cultivation area.</li>
+          <li>Implemented automatic control of humidifiers and fans to maintain optimal growing conditions.</li>
+        </ul>
+      </article>
+
+      <!-- Proyek 4 -->
+      <article class="card">
+        <div class="proj-img">
+          <img src="dashboard_PA.png" alt="Lake Toba Project">
+        </div>
+        <div class="projTitle">
+          <h3>Lake Toba Travel Website</h3>
+          <div class="projMeta">WordPress</div>
+        </div>
+        <ul>
+          <li>Developed a tourism package website for Lake Toba using WordPress[cite: 3].</li>
+          <li>Customized themes, structured content, itineraries, and pricing details to improve user experience[cite: 3].</li>
+        </ul>
+      </article>
+
+      <!-- Proyek 5 -->
+      <article class="card">
+        <div class="proj-img">
+          <img src="SISTAN.png" alt="Drying System Project">
+        </div>
+        <div class="projTitle">
+          <h3>Automatic Drying Miniature</h3>
+          <div class="projMeta">Arduino</div>
+        </div>
+        <ul>
+          <li>Built a miniature automatic drying system using Arduino as the main controller.</li>
+          <li>Utilized light and rain sensors with servo motor control to automatically protect clothes during rain.</li>
+        </ul>
+      </article>
+<<<<<<< HEAD
+
+      <article class="card">
+        <div class="proj-img">
+          <img src="smarthome.jpeg"Smart Home IoT Gateway and Monitoring Dashboard alt="Smart Home IoT Project">
+        </div>
+        <div class="projTitle">
+          <h3>Smart Home IoT Gateway and Monitoring Dashboard</h3>
+          <div class="projMeta">• Laravel • Node-Red</div>
+        </div>
+        <ul>
+          <li>Developed a centralized Smart Home gateway to receive, process, and distribute data from multiple IoT devices. </li>
+          <li>Implemented MQTT-based communication to enable real-time data exchange between smart devices and the gateway. </li>
+          <li>Implemented command control flow from Laravel dashboard to IoT devices via MQTT topics. </li>
+          <li>Built data routing and automation flows using Node-RED as the core gateway logic. </li>
+        </ul>
+      </article>
+
+=======
+>>>>>>> a09799e (Update Skill and portofolio content)
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="sectionTitle">
+      <h2>Contact</h2>
+      <span>Let’s connect</span>
+    </div>
+    <div class="card">
+      <div class="grid" style="gap:8px">
+        <div class="muted">Email: <a href="mailto:gramaldyhutapea@gmail.com">gramaldyhutapea@gmail.com</a></div>
+        <div class="muted">LinkedIn: <a href="https://www.linkedin.com/in/gramaldy-euraldo-b06582342" target="_blank" rel="noreferrer">linkedin.com/in/gramaldy-euraldo</a></div>
+        <div class="muted">GitHub: <a href="https://github.com/gramaldyhtp" target="_blank" rel="noreferrer">github.com/gramaldyhtp</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="y"></span> Gramaldy Euraldo Hutapea 
+  </footer>
+</main>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+<<<<<<< HEAD
+
+=======
+>>>>>>> a09799e (Update Skill and portofolio content)
+</html>
